@@ -1,3 +1,5 @@
+package com.levelup.dao;
+
 public class FileDataProvider implements DataProvider {
 
     private static final String READ_WRITE_ACCESS = "rw";
