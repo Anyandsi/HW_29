@@ -1,0 +1,11 @@
+package com.levelup.dao;
+
+
+public abstract class AbstractCSVDAO extends AbstractFileDAO{
+    protected static String HEADER_CSV = "";
+    protected AbstractCSVDAO(final FileDataProvider fileDataProvider, String fileName, final String HEADER_CSV) {
+        super(fileDataProvider, fileName);
+        this.HEADER_CSV = HEADER_CSV;
+
+    }
+}
