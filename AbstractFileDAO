@@ -1,0 +1,40 @@
+package com.levelup.dao;
+
+import java.io.FileNotFoundException;
+import java.io.RandomAccessFile;
+import java.util.ArrayList;
+
+
+public abstract class AbstractFileDAO implements DAO{
+    
+    private Long id;
+    protected final FileDataProvider fileDataProvider;
+    private String fileName;
+
+    public AbstractFileDAO(FileDataProvider fileDataProvider, String fileName) {
+        this.fileDataProvider = fileDataProvider;
+        this.fileName = fileName;
+        fileDataProvider.appendFile(fileName);
+    }
+
+    public RandomAccessFile getDataFile() throws FileNotFoundException {
+        return fileDataProvider.getDataFile(fileName);
+    }
+
+
+
+    @Override
+    public void create(Object o) {
+        
+    }
+
+    @Override
+    public ArrayList read() {
+        return null;
+    }
+
+    @Override
+    public void update(Object o) {
+
+    }
+}
