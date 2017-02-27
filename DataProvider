@@ -1,3 +1,5 @@
+package com.levelup.dao;
+
 public interface DataProvider {
 
     enum ConnectionType {
